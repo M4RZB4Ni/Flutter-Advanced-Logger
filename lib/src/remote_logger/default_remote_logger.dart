@@ -4,6 +4,7 @@ import 'package:log_engine/src/remote_logger/get_device_info.dart';
 import 'package:log_engine/src/remote_logger/log_entry.dart';
 import 'package:log_engine/src/remote_logger/remote_logger_interface.dart';
 
+/// Default implementation of a remote logger.
 class DefaultRemoteLogger implements IRemoteLogger {
   DefaultRemoteLogger._(this._getDeviceInfo, this._getAppInfo);
 
@@ -13,6 +14,9 @@ class DefaultRemoteLogger implements IRemoteLogger {
   late final DeviceInfo? _deviceInfo;
   late final String? _appVersion;
 
+  /// Returns a singleton instance of [DefaultRemoteLogger].
+  ///
+  /// If an instance doesn't exist, it will create one and initialize it.
   static Future<DefaultRemoteLogger> getInstance({
     IGetDeviceInfo? getDeviceInfo,
     IGetAppInfo? getAppInfo,
@@ -28,6 +32,7 @@ class DefaultRemoteLogger implements IRemoteLogger {
     return _instance!;
   }
 
+  /// Initializes the remote logger by fetching device information and app version.
   Future<void> _initialize() async {
     _deviceInfo = await _getDeviceInfo.getDeviceInformation();
     _appVersion = await _getAppInfo.getAppVersion();

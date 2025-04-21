@@ -5,11 +5,15 @@ import 'package:device_info_plus/device_info_plus.dart';
 import 'package:log_engine/src/remote_logger/connectivity_type.dart';
 import 'package:log_engine/src/remote_logger/log_entry.dart';
 
+/// An interface for retrieving device information.
 abstract interface class IGetDeviceInfo {
+  /// Retrieves device information as a [DeviceInfo] object.
   Future<DeviceInfo> getDeviceInformation();
 }
 
+/// Implementation of [IGetDeviceInfo] to fetch device details.
 class GetDeviceInfo implements IGetDeviceInfo {
+  /// Determines the current network connectivity status.
   Future<ConnectivityType> _getNetworkStatus() async {
     final connectivityResult = await Connectivity().checkConnectivity();
 
@@ -48,6 +52,7 @@ class GetDeviceInfo implements IGetDeviceInfo {
     return {'model': 'Unknown', 'os': 'Unknown'};
   }
 
+  /// Retrieves basic device information (model and OS).
   @override
   Future<DeviceInfo> getDeviceInformation() async {
     final device = await _getDeviceInfo();
