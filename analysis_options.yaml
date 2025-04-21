@@ -1,0 +1,148 @@
+# This file configures the static analysis results for your project (errors,
+# warnings, and lints).
+#
+# This enables the 'recommended' set of lints from `package:lints`.
+include: package:flutter_lints/flutter.yaml
+analyzer:
+  exclude:
+    - lib/**/*.freezed.dart
+    - lib/**/*.gr.dart
+    - lib/app/l10n/*.dart
+    - packages/**/*.g.dart
+    - packages/**/types/**
+
+  errors:
+    omit_local_variable_types: error
+    missing_required_param: error
+    missing_return: error
+    always_declare_return_types: error
+    always_put_required_named_parameters_first: error
+    always_use_package_imports: error
+    annotate_overrides: error
+    avoid_annotating_with_dynamic: ignore
+    avoid_bool_literals_in_conditional_expressions: ignore
+    avoid_empty_else: error
+    avoid_equals_and_hash_code_on_mutable_classes: error
+    avoid_escaping_inner_quotes: error
+    avoid_field_initializers_in_const_classes: error
+    avoid_function_literals_in_foreach_calls: error
+    avoid_init_to_null: error
+    avoid_print: error
+    avoid_returning_null_for_void: error
+    avoid_setters_without_getters: error
+    avoid_unused_constructor_parameters: error
+    cancel_subscriptions: error
+    close_sinks: error
+    empty_catches: error
+    empty_constructor_bodies: error
+    library_names: error
+    no_duplicate_case_values: error
+    prefer_single_quotes: error
+    sort_constructors_first: error
+    unnecessary_const: error
+    unnecessary_getters_setters: error
+    unnecessary_new: error
+    unnecessary_overrides: ignore
+    unnecessary_parenthesis: error
+    unnecessary_string_escapes: error
+    unnecessary_this: error
+    use_late_for_private_fields_and_variables: error
+    avoid_implementing_value_types: error
+    always_require_non_null_named_parameters: error
+    avoid_catching_errors: error
+    avoid_null_checks_in_equality_operators: error
+    avoid_positional_boolean_parameters: error
+    avoid_private_typedef_functions: error
+    avoid_redundant_argument_values: error
+    avoid_relative_lib_imports: error
+    avoid_return_types_on_setters: error
+    avoid_returning_null_for_future: error
+    type_annotate_public_apis: error
+    avoid_multiple_declarations_per_line: error
+    parameter_assignments: error
+    prefer_is_empty: error
+    sized_box_for_whitespace: error
+
+dart_code_metrics:
+  anti-patterns:
+    - long-method
+    - long-parameter-list
+  metrics:
+    cyclomatic-complexity: 20
+    maximum-nesting-level: 5
+    number-of-parameters: 5
+    source-lines-of-code: 50
+  metrics-exclude:
+    - test/**
+    - lib/setup.config.dart
+  rules-exclude:
+    - test/**
+    - lib/setup.config.dart
+  rules:
+    - newline-before-return
+    - no-boolean-literal-compare
+    - no-empty-block
+    - prefer-trailing-comma
+    - no-equal-then-else
+
+linter:
+  rules:
+    - omit_local_variable_types
+    - always_declare_return_types
+    - always_put_required_named_parameters_first
+    - always_use_package_imports
+    - annotate_overrides
+    - avoid_annotating_with_dynamic
+    - avoid_bool_literals_in_conditional_expressions
+    - avoid_empty_else
+    - avoid_equals_and_hash_code_on_mutable_classes
+    - avoid_escaping_inner_quotes
+    - avoid_field_initializers_in_const_classes
+    - avoid_function_literals_in_foreach_calls
+    - avoid_init_to_null
+    - avoid_print
+    - avoid_returning_null_for_void
+    - avoid_setters_without_getters
+    - avoid_unused_constructor_parameters
+    - cancel_subscriptions
+    - close_sinks
+    - empty_catches
+    - empty_constructor_bodies
+    - implementation_imports
+    - library_names
+    - no_duplicate_case_values
+    - prefer_single_quotes
+    - sort_constructors_first
+    - unnecessary_brace_in_string_interps
+    - unnecessary_const
+    - unnecessary_getters_setters
+    - unnecessary_new
+    - unnecessary_overrides
+    - unnecessary_parenthesis
+    - unnecessary_string_escapes
+    - unnecessary_this
+    - unrelated_type_equality_checks
+    - use_late_for_private_fields_and_variables
+    - avoid_implementing_value_types
+    - avoid_catching_errors
+    - avoid_null_checks_in_equality_operators
+    - avoid_positional_boolean_parameters
+    - avoid_private_typedef_functions
+    - avoid_redundant_argument_values
+    - avoid_relative_lib_imports
+    - avoid_return_types_on_setters
+    - avoid_multiple_declarations_per_line
+    - prefer_is_empty
+    - sized_box_for_whitespace
+    - prefer_final_locals
+    - camel_case_types
+    - camel_case_extensions
+    - file_names
+    - library_prefixes
+    - non_constant_identifier_names
+    - directives_ordering
+    - curly_braces_in_flow_control_structures
+    - prefer_collection_literals
+    - prefer_iterable_whereType
+    - prefer_function_declarations_over_variables
+    - use_rethrow_when_possible
