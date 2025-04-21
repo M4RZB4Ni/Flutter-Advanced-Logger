@@ -1,5 +1,5 @@
-import 'package:log_engine/src/base_logger.dart';
-import 'package:log_engine/src/log_priority.dart';
+import 'package:log_engine/src/core/base_logger.dart';
+import 'package:log_engine/src/core/log_priority.dart';
 import 'package:test/test.dart';
 
 class MockLogger extends BaseLogger {

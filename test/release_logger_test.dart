@@ -1,5 +1,5 @@
-import 'package:log_engine/src/log_priority.dart';
-import 'package:log_engine/src/release_logger.dart';
+import 'package:log_engine/src/core/log_priority.dart';
+import 'package:log_engine/src/core/release_logger.dart';
 import 'package:log_engine/src/remote_logger/remote_logger_interface.dart';
 import 'package:test/test.dart';
 

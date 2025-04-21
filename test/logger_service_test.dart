@@ -1,6 +1,6 @@
-import 'package:log_engine/src/debug_logger.dart';
-import 'package:log_engine/src/logger_provider.dart';
-import 'package:log_engine/src/release_logger.dart';
+import 'package:log_engine/src/core/debug_logger.dart';
+import 'package:log_engine/src/core/logger_provider.dart';
+import 'package:log_engine/src/core/release_logger.dart';
 import 'package:mockito/mockito.dart';
 import 'package:test/test.dart';
 
